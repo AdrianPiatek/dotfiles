@@ -57,7 +57,7 @@ alias confb='$EDITOR ~/dotfiles/.bashrc'
 # -----------------------------------------------------
 # START STARSHIP
 # -----------------------------------------------------
-# eval "$(starship init bash)"
+eval "$(starship init bash)"
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
@@ -73,3 +73,5 @@ shopt -s histappend
 
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+export PATH="$HOME/go/bin:$PATH"
