@@ -1,10 +1,25 @@
+#    _               _              
+#   | |__   __ _ ___| |__  _ __ ___ 
+#   | '_ \ / _` / __| '_ \| '__/ __|
+#  _| |_) | (_| \__ \ | | | | | (__ 
+# (_)_.__/ \__,_|___/_| |_|_|  \___|
+# 
+# by Stephan Raabe (2023)
+# -----------------------------------------------------
+# ~/.bashrc
+# -----------------------------------------------------
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+PS1='[\u@\h \W]\$ '
+
 # Define Editor
 export EDITOR=nvim
 
 # -----------------------------------------------------
 # ALIASES
 # -----------------------------------------------------
-fastfetch --config ~/.config/fastfetch/pf.jsonc
+
 alias c='clear'
 alias nf='fastfetch'
 alias pf='fastfetch --config ~/.config/fastfetch/pf.jsonc'
@@ -37,16 +52,26 @@ alias gtree='git log --graph --decorate --pretty=oneline --abbrev-commit'
 # EDIT CONFIG FILES
 # -----------------------------------------------------
 
-alias confb='$EDITOR ~/dotfiles/.bashrc'
-
+alias confb='$EDITOR ~/dotfiles/bash/.bashrc'
 
 # -----------------------------------------------------
-# start starship
+# START STARSHIP
 # -----------------------------------------------------
 eval "$(starship init bash)"
 
+# Load Angular CLI autocompletion.
+# source <(ng completion script)
 
-# -----------------------------------------------------
-# start fzf key bindings
-# -----------------------------------------------------
-source /usr/share/doc/fzf/examples/key-bindings.bash
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+# Setup pyenv
+# eval "$(pyenv init --path)"
+
+HISTCONTROL=ignoredups:erasedups
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+export PATH="$HOME/go/bin:$PATH"
