@@ -24,7 +24,7 @@
     "battery": {
         "format": "{icon}   {capacity}%",
         "format-icons": ["", "", "", "", ""],
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 󰂄",
         "interval": 30,
         "states": {
             "warning": 25,
@@ -37,19 +37,19 @@
         "format-alt": "{icon}   {ipaddr}/{cidr}",
         "format-alt-click": "click-right",
         "format-icons": {
-            "wifi": ["", "" ,""],
-            "ethernet": [""],
-            "disconnected": [""]
+            "wifi": ["󰤟", "󰤢" ,"󰤨"],
+            "ethernet": ["󰈀"],
+            "disconnected": ["󰌙"]
         },
         "on-click": "kitty -e nmtui",
 		"tooltip": true
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-muted": "",
+        "format-muted": "",
         "format-icons": {
-            "phone": [" ", " ", " ", " "],
-            "default": ["", "", "", ""]
+            "phone": [" ", " ", " ", " "],
+            "default": ["", "", "", ""]
         },
         "scroll-step": 10,
         "on-click": "pavucontrol",
@@ -59,7 +59,7 @@
         "format": "{icon}",
         "format-alt": "{percent}% {icon}",
         "format-alt-click": "click-right",
-        "format-icons": ["", ""],
+        "format-icons": ["", "󰌵"],
         "on-scroll-down": "light -A 1",
         "on-scroll-up": "light -U 1",
 		"tooltip": false
@@ -67,7 +67,7 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
+            "activated": "",
             "deactivated": ""
         },
         "tooltip": false
