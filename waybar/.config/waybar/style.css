@@ -41,12 +41,12 @@ window {
 }
 
 #mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #tray{
-    margin:     0px 6px 0px 10px;
-    min-width:  20px;
+    margin:     0px 6px 0px 6px;
+    min-width:  18px;
 }
 
 #clock {
-    margin:     0px 16px 0px 10px;
+    margin:     0px 10px 0px 10px;
     min-width:  140px;
 }
 
