@@ -40,9 +40,9 @@ window {
     color:      rgba(238, 46, 36, 1);
 }
 
-#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight{
+#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #tray{
     margin:     0px 6px 0px 10px;
-    min-width:  25px;
+    min-width:  20px;
 }
 
 #clock {
