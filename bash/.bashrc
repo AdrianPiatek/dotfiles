@@ -75,3 +75,4 @@ shopt -s histappend
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 export PATH="$HOME/go/bin:$PATH"
+export PATH=$PATH:~/dotfiles/scripts
