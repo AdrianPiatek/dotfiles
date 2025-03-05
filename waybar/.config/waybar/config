@@ -5,7 +5,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["tray",  "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
+    "modules-right": ["tray", "pulseaudio", "network", "idle_inhibitor", "clock"],
     "hyprland/submap": {
         "format": " {}"
     },
@@ -45,7 +45,7 @@
 		"tooltip": true
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}   {volume}%",
         "format-muted": "",
         "format-icons": {
             "phone": [" ", " ", " ", " "],
@@ -54,15 +54,6 @@
         "scroll-step": 10,
         "on-click": "pavucontrol",
         "tooltip": false
-    },
-    "backlight": {
-        "format": "{icon}",
-        "format-alt": "{percent}% {icon}",
-        "format-alt-click": "click-right",
-        "format-icons": ["", "󰌵"],
-        "on-scroll-down": "light -A 1",
-        "on-scroll-up": "light -U 1",
-		"tooltip": false
     },
     "idle_inhibitor": {
         "format": "{icon}",
