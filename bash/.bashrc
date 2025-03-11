@@ -76,3 +76,22 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; h
 
 export PATH="$HOME/go/bin:$PATH"
 export PATH=$PATH:~/dotfiles/scripts
+# 5x definition of command:
+# - Using it as a command
+# - Ctrl+T
+# - Alt+C
+# - cat **<Tab> # files and directories
+# - cd **<Tab> # directories
+ 
+FZF_FD_OPTS="--hidden --follow --exclude '.git'"
+export FZF_DEFAULT_COMMAND="fd ${FZF_FD_OPTS}"
+export FZF_CTRL_T_COMMAND="fd ${FZF_FD_OPTS}"
+export FZF_ALT_C_COMMAND="fd --type d ${FZF_FD_OPTS}"
+
+_fzf_compgen_path() {
+    fd ${FZF_FD_OPTS} . "${1}"
+}
+
+_fzf_compgen_dir() {
+    fd --type d ${FZF_FD_OPTS} . "${1}"
+}
