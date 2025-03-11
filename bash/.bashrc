@@ -64,6 +64,8 @@ eval "$(starship init bash)"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+export FZF_DEFAULT_OPTS="--walker-skip=.git,node_modules,target,.steam,.var,.local"
+
 # Setup pyenv
 # eval "$(pyenv init --path)"
 
@@ -82,16 +84,16 @@ export PATH=$PATH:~/dotfiles/scripts
 # - Alt+C
 # - cat **<Tab> # files and directories
 # - cd **<Tab> # directories
- 
-FZF_FD_OPTS="--hidden --follow --exclude '.git'"
-export FZF_DEFAULT_COMMAND="fd ${FZF_FD_OPTS}"
-export FZF_CTRL_T_COMMAND="fd ${FZF_FD_OPTS}"
-export FZF_ALT_C_COMMAND="fd --type d ${FZF_FD_OPTS}"
-
-_fzf_compgen_path() {
-    fd ${FZF_FD_OPTS} . "${1}"
-}
-
-_fzf_compgen_dir() {
-    fd --type d ${FZF_FD_OPTS} . "${1}"
-}
+#  
+# FZF_FD_OPTS="--hidden --follow --exclude '.git'"
+# export FZF_DEFAULT_COMMAND="fd ${FZF_FD_OPTS}"
+# export FZF_CTRL_T_COMMAND="fd ${FZF_FD_OPTS}"
+# export FZF_ALT_C_COMMAND="fd --type d ${FZF_FD_OPTS}"
+#
+# _fzf_compgen_path() {
+#     fd ${FZF_FD_OPTS} . "${1}"
+# }
+#
+# _fzf_compgen_dir() {
+#     fd --type d ${FZF_FD_OPTS} . "${1}"
+# }
