@@ -1,4 +1,5 @@
 [global]
+monitor = 2
 # Display
 follow = mouse
 width = 350
