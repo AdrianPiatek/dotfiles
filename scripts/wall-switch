@@ -6,5 +6,6 @@ PREVIEW=true \
 rofi -no-config -theme fullscreen-preview.rasi \
 	-show filebrowser -filebrowser-command 'swww img' \
 	-filebrowser-directory "$WallDir" \
-	-filebrowser-sorting-method mtime \
+	-filebrowser-directories-first false\
+	-filebrowser-sorting-method name \
 	-selected-row 1 >/dev/null
