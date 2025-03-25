@@ -22,7 +22,6 @@ export EDITOR=nvim
 
 alias c='clear'
 alias nf='fastfetch'
-alias pf='fastfetch --config ~/.config/fastfetch/pf.jsonc'
 alias la='eza -a --icons'
 alias ls='eza --icons'
 alias ll='eza -al --icons'
@@ -64,7 +63,7 @@ eval "$(starship init bash)"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
-export FZF_DEFAULT_OPTS="--walker-skip=.git,node_modules,target,.steam,.var,.local"
+export FZF_DEFAULT_OPTS="--walker-skip=.git,node_modules,target,.steam,.var,.local,Games"
 
 # Setup pyenv
 # eval "$(pyenv init --path)"
@@ -78,6 +77,7 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; h
 
 export PATH="$HOME/go/bin:$PATH"
 export PATH=$PATH:~/dotfiles/scripts
+
 # 5x definition of command:
 # - Using it as a command
 # - Ctrl+T
