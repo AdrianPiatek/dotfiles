@@ -97,3 +97,4 @@ export PATH=$PATH:~/dotfiles/scripts
 # _fzf_compgen_dir() {
 #     fd --type d ${FZF_FD_OPTS} . "${1}"
 # }
+export PATH="$HOME/.local/bin:$PATH"
